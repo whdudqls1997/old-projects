@@ -1,0 +1,50 @@
+IF we use Tree structure for the board:
+
+1. Node Class
+
+2. Tree Class
+
+3. Tree Reader
+
+-----------------------------
+
+1. Node Class
+
+- Contains nearby hexagons as public node (needs to be private or static? maybe)
+- Contains the pointer to the character information on this hexagon
+- Contains a flag for "going to be occupied" for smooth simulation
+
+- void constructor
+- input constructor
+
+- Functions? : maybe to empty the node without losing it <- but this could be done with the tree class
+- Maybe Null check function? for safety?
+- Garbage collector <- if not run on JAVA
+
+2. Tree Class
+
+- Should be static? or we can implement a stale copy method to insure the structural safety of the tree
+
+- void constructor
+- input constructor
+
+- Now structural decision time : 
+1. Do we add the reader functions to this class or leave it out for an another class?
+2. Do we add the tree manager functions or leave it out for an another class?
+
+- Null checker
+
+3. Tree Reader
+
+- Does NOT add or remove nodes from the tree, only change the information within the nodes
+- Calculate min route to a point on the tree
+- Collision check -> if route is blocked/occupied, next min route
+- Route expectation function -> for better AI interactions
+- Enemy detection function -> must set delay for it 
+(constant reader or could be static with better expectation methods)
+(Detection period of 100ms? should match the fastest moving unit)
+
+- Wall creation method
+- Golem management method
+
+etc...
